@@ -9,12 +9,12 @@ package lista1;
  *
  * @author jonat
  */
-public class ex9 extends javax.swing.JFrame {
+public class ex11 extends javax.swing.JFrame {
 
     /**
-     * Creates new form ex9
+     * Creates new form ex11
      */
-    public ex9() {
+    public ex11() {
         initComponents();
     }
 
@@ -30,16 +30,14 @@ public class ex9 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         n1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        media = new javax.swing.JTextField();
         calcular = new javax.swing.JButton();
         limpar = new javax.swing.JButton();
         sair = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        n2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        campo = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("9 - Média Ponderada");
+        setTitle("11 - Números Primos");
 
         n1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,15 +45,7 @@ public class ex9 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nota 1");
-
-        jLabel2.setText("Média Ponderada");
-
-        media.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mediaActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("Entre com um número");
 
         calcular.setText("Calcular");
         calcular.addActionListener(new java.awt.event.ActionListener() {
@@ -78,56 +68,42 @@ public class ex9 extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Nota 2");
-
-        n2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                n2ActionPerformed(evt);
-            }
-        });
+        campo.setColumns(20);
+        campo.setRows(5);
+        jScrollPane1.setViewportView(campo);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1)
+                .addGap(10, 10, 10))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(calcular, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(limpar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(sair, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(media, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jLabel1))
-                            .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(22, 22, 22)))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(calcular, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                    .addComponent(limpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(50, 50, 50))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(media, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
                 .addComponent(calcular)
                 .addGap(15, 15, 15)
                 .addComponent(limpar)
@@ -150,43 +126,57 @@ public class ex9 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public boolean primo(int vnum) {
+        int cont = 0;
+        if (vnum < 0) {
+            vnum = vnum * (-1);
+        }
+        if (vnum != 1 && vnum != 0) {
+            for (int i = 0; i < vnum; i++) {
+                if (vnum % (i + 1) == 0) {
+                    cont++;
+                }             
+            }
+            
+            if (cont == 2) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    
     private void n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_n1ActionPerformed
 
-    private void mediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mediaActionPerformed
-
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
-        // TODO add your handling code here:       
-        double vn1, vn2, vn3, vmedia;
-        vn1 = vn2 = vn3 = 0;
+        // TODO add your handling code here:
+        campo.setText("");
+        int lim = 0;
         try {
-            vn1 = Double.parseDouble(n1.getText());
-            vn2 = Double.parseDouble(n2.getText());
-            //Media = (N1*2 + N2*3)/2+3
-            vmedia = (vn1 * 2 + vn2 * 3) / (2 + 3);
-
-            if (vmedia >= 5) {
-                media.setText("Aprovado! (" + vmedia + ")");
-            } else {
-                media.setText("Reprovado! (" + vmedia + ")");
+            lim = Integer.parseInt(n1.getText());
+            
+            for (int i = 0; i < lim; i++) {
+                if (primo(i)) {
+                    campo.setText(campo.getText() + i + "\n");
+                }
+                
             }
-
         } catch (NumberFormatException e) {
             n1.setText("");
-            n2.setText(""); 
-            media.setText("Formato Inválido");
+            campo.setText("Formato Inválido");
         }
+        
+
     }//GEN-LAST:event_calcularActionPerformed
 
     private void limparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparActionPerformed
         // TODO add your handling code here:
-
         n1.setText("");
-        n2.setText("");
-        media.setText("");
+        campo.setText("");
     }//GEN-LAST:event_limparActionPerformed
 
     private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
@@ -194,25 +184,19 @@ public class ex9 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_sairActionPerformed
 
-    private void n2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_n2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calcular;
+    private javax.swing.JTextArea campo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton limpar;
-    private javax.swing.JTextField media;
     private javax.swing.JTextField n1;
-    private javax.swing.JTextField n2;
     private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
-
 }
