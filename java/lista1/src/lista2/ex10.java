@@ -5,16 +5,18 @@
  */
 package lista2;
 
+import java.awt.Color;
+
 /**
  *
  * @author jonat
  */
-public class ex4 extends javax.swing.JFrame {
+public class ex10 extends javax.swing.JFrame {
 
     /**
-     * Creates new form ex4
+     * Creates new form ex10
      */
-    public ex4() {
+    public ex10() {
         initComponents();
     }
 
@@ -28,17 +30,40 @@ public class ex4 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        Sair = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         numeros = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         resultado = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("4 - Ínteiros");
+        setTitle("10 - Vetor de Inteiros");
+
+        numeros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numerosActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Números Para o Vetor (separado por ,)");
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Números Primos");
+
+        resultado.setColumns(20);
+        resultado.setRows(5);
+        jScrollPane1.setViewportView(resultado);
+
+        jButton1.setText("Calcular");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Limpar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -51,29 +76,6 @@ public class ex4 extends javax.swing.JFrame {
         Sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SairActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Números (separados por ,)");
-
-        numeros.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numerosActionPerformed(evt);
-            }
-        });
-
-        resultado.setColumns(20);
-        resultado.setRows(5);
-        jScrollPane1.setViewportView(resultado);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Números Primos");
-
-        jButton1.setText("Calcular");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
             }
         });
 
@@ -91,13 +93,18 @@ public class ex4 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numeros)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                                    .addComponent(Sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addContainerGap()
+                                .addComponent(Sair, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, 0)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -133,62 +140,46 @@ public class ex4 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-  public boolean primo(int vnum) {
-        int cont = 0;
-        if (vnum < 0) {
-            vnum = vnum * (-1);
-        }
-        if (vnum != 1 && vnum != 0) {
-            for (int i = 0; i < vnum; i++) {
-                if (vnum % (i + 1) == 0) {
-                    cont++;
-                }
-            }
-
-            if (cont == 2) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        resultado.setText("");
-        numeros.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_SairActionPerformed
 
-    private void numerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numerosActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_numerosActionPerformed
+        resultado.setForeground(Color.black);
+        resultado.setText("");
+        numeros.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        resultado.setText("");
+        resultado.setForeground(Color.black);
         try {
-            resultado.setText("");
-            String numbers[];
-            String num = numeros.getText();
+            String numStr[] = numeros.getText().split(",");
+            int numInt[] = new int[numStr.length];
 
-            numbers = num.split(",");
-
-            for (int i = 0; i < numbers.length; i++) {
-                if (primo(Integer.parseInt(numbers[i]))) {
-                    resultado.setText(resultado.getText() + numbers[i] + "\n");
-                }
+            for (int i = 0; i < numStr.length; i++) {
+                numInt[i] = Integer.parseInt(numStr[i]);
             }
-        } catch (NumberFormatException e) {
-            resultado.setText("Verifique os números inseridos");
+
+            for (int i = 0; i < numStr.length; i++) {
+                resultado.setText(resultado.getText() + "[" + i + "] = " + numInt[i] + "\n");
+            }
+        } catch (Exception e) {
+            numeros.setText("");
+            resultado.setForeground(Color.red);
+            resultado.setText("Verifique os Números");
         }
 
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void numerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numerosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numerosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,20 +198,20 @@ public class ex4 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ex4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ex10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ex4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ex10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ex4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ex10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ex4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ex10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ex4().setVisible(true);
+                new ex10().setVisible(true);
             }
         });
     }

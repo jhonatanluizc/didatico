@@ -33,7 +33,8 @@ public class ex6 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("6 - Soma do Quadrado ");
 
         campo.setColumns(20);
         campo.setRows(5);
@@ -94,7 +95,7 @@ public class ex6 extends javax.swing.JFrame {
         campo.setText("");
         int total = 0;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 30; i++) {
             if (i < 9) {
                 campo.setText(campo.getText() + "0" + (i + 1) + " [" + ((i + 1) * (i + 1)) + "]" + "\n");
             } else {
