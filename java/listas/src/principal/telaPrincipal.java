@@ -48,6 +48,10 @@ public class telaPrincipal extends javax.swing.JFrame {
     Ex12_L2 ex12_l2;
     Ex13_L2 ex13_l2;
     Ex14_L2 ex14_l2;
+    Ex15_L2 ex15_l2;
+    Ex16_L2 ex16_l2;
+    Ex17_L2 ex17_l2;
+
 
     public telaPrincipal() {
         initComponents();
@@ -83,6 +87,9 @@ public class telaPrincipal extends javax.swing.JFrame {
         ex12_l2 = new Ex12_L2();
         ex13_l2 = new Ex13_L2();
         ex14_l2 = new Ex14_L2();
+        ex15_l2 = new Ex15_L2();
+        ex16_l2 = new Ex16_L2();
+        ex17_l2 = new Ex17_L2();
     }
 
     /**
@@ -134,6 +141,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenuItem30 = new javax.swing.JMenuItem();
         jMenuItem31 = new javax.swing.JMenuItem();
         jMenuItem32 = new javax.swing.JMenuItem();
+        jMenuItem38 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem33 = new javax.swing.JMenuItem();
         jMenuItem34 = new javax.swing.JMenuItem();
@@ -142,6 +150,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenuItem37 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Listas");
 
         jMenu1.setText("Lista 1");
 
@@ -388,9 +397,19 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem28);
 
         jMenuItem29.setText("Exercício 15");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem29ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem29);
 
         jMenuItem30.setText("Exercício 16");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem30);
 
         jMenuItem31.setText("Exercício 17");
@@ -403,6 +422,9 @@ public class telaPrincipal extends javax.swing.JFrame {
 
         jMenuItem32.setText("Exercício 18");
         jMenu6.add(jMenuItem32);
+
+        jMenuItem38.setText("Exercício 19");
+        jMenu6.add(jMenuItem38);
 
         jMenu3.add(jMenu6);
 
@@ -541,6 +563,7 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
         // TODO add your handling code here:
+        ex17_l2.setVisible(true);
     }//GEN-LAST:event_jMenuItem31ActionPerformed
 
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
@@ -597,6 +620,16 @@ public class telaPrincipal extends javax.swing.JFrame {
         ex13_l2.setVisible(true);
     }//GEN-LAST:event_jMenuItem27ActionPerformed
 
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
+        // TODO add your handling code here:
+        ex15_l2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+        // TODO add your handling code here:
+        ex16_l2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -641,6 +674,7 @@ public class telaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem35;
     private javax.swing.JMenuItem jMenuItem36;
     private javax.swing.JMenuItem jMenuItem37;
+    private javax.swing.JMenuItem jMenuItem38;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
