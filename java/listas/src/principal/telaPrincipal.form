@@ -229,7 +229,7 @@
             </Menu>
             <Menu class="javax.swing.JMenu" name="jMenu6">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 10 a 18"/>
+                <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 10 a 19"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem24">
@@ -300,11 +300,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 18"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem32ActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem38">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 19"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem38ActionPerformed"/>
+                  </Events>
                 </MenuItem>
               </SubComponents>
             </Menu>
@@ -344,6 +350,14 @@
               </Properties>
             </MenuItem>
           </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenu8MouseClicked"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>

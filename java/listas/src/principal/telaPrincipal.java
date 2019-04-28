@@ -51,6 +51,8 @@ public class telaPrincipal extends javax.swing.JFrame {
     Ex15_L2 ex15_l2;
     Ex16_L2 ex16_l2;
     Ex17_L2 ex17_l2;
+    Ex18_L2 ex18_l2;
+    Ex19_L2 ex19_l2;
 
 
     public telaPrincipal() {
@@ -90,6 +92,8 @@ public class telaPrincipal extends javax.swing.JFrame {
         ex15_l2 = new Ex15_L2();
         ex16_l2 = new Ex16_L2();
         ex17_l2 = new Ex17_L2();
+        ex18_l2 = new Ex18_L2();
+        ex19_l2 = new Ex19_L2();
     }
 
     /**
@@ -148,6 +152,7 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenuItem35 = new javax.swing.JMenuItem();
         jMenuItem36 = new javax.swing.JMenuItem();
         jMenuItem37 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Listas");
@@ -354,7 +359,7 @@ public class telaPrincipal extends javax.swing.JFrame {
 
         jMenu3.add(jMenu2);
 
-        jMenu6.setText("Exercício 10 a 18");
+        jMenu6.setText("Exercício 10 a 19");
 
         jMenuItem24.setText("Exercício 10");
         jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
@@ -421,9 +426,19 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem31);
 
         jMenuItem32.setText("Exercício 18");
+        jMenuItem32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem32ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem32);
 
         jMenuItem38.setText("Exercício 19");
+        jMenuItem38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem38ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem38);
 
         jMenu3.add(jMenu6);
@@ -453,6 +468,14 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenu7.add(jMenuItem37);
 
         jMenuBar1.add(jMenu7);
+
+        jMenu8.setText("Sair");
+        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu8MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
 
@@ -630,6 +653,21 @@ public class telaPrincipal extends javax.swing.JFrame {
         ex16_l2.setVisible(true);
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
+    private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
+        // TODO add your handling code here:
+        ex18_l2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem32ActionPerformed
+
+    private void jMenuItem38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem38ActionPerformed
+        // TODO add your handling code here:
+        ex19_l2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem38ActionPerformed
+
+    private void jMenu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenu8MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -642,6 +680,7 @@ public class telaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
