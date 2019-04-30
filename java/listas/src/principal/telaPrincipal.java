@@ -7,6 +7,7 @@ package principal;
 
 import lista1.*;
 import lista2.*;
+import lista3.*;
 
 /**
  *
@@ -53,6 +54,13 @@ public class telaPrincipal extends javax.swing.JFrame {
     Ex17_L2 ex17_l2;
     Ex18_L2 ex18_l2;
     Ex19_L2 ex19_l2;
+    
+    //lista 3
+    Ex01_L3 ex01_l3;
+    Ex02_L3 ex02_l3;
+    Ex03_L3 ex03_l3;
+    Ex04_L3 ex04_l3;
+    Ex05_L3 ex05_l3;
 
 
     public telaPrincipal() {
@@ -94,6 +102,14 @@ public class telaPrincipal extends javax.swing.JFrame {
         ex17_l2 = new Ex17_L2();
         ex18_l2 = new Ex18_L2();
         ex19_l2 = new Ex19_L2();
+        
+        //lista 3
+         ex01_l3 = new Ex01_L3();
+         ex02_l3 = new Ex02_L3();
+         ex03_l3 = new Ex03_L3();
+         ex04_l3 = new Ex04_L3();
+         ex05_l3 = new Ex05_L3();
+        
     }
 
     /**
@@ -448,12 +464,27 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenu7.setText("Lista 3");
 
         jMenuItem33.setText("Exercício 1");
+        jMenuItem33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem33ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem33);
 
         jMenuItem34.setText("Exercício 2");
+        jMenuItem34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem34ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem34);
 
         jMenuItem35.setText("Exercício 3");
+        jMenuItem35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem35ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem35);
 
         jMenuItem36.setText("Exercício 4");
@@ -465,6 +496,11 @@ public class telaPrincipal extends javax.swing.JFrame {
         jMenu7.add(jMenuItem36);
 
         jMenuItem37.setText("Exercício 5");
+        jMenuItem37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem37ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem37);
 
         jMenuBar1.add(jMenu7);
@@ -591,6 +627,7 @@ public class telaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem36ActionPerformed
         // TODO add your handling code here:
+         ex04_l3.setVisible(true);
     }//GEN-LAST:event_jMenuItem36ActionPerformed
 
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
@@ -667,6 +704,26 @@ public class telaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jMenu8MouseClicked
+
+    private void jMenuItem33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem33ActionPerformed
+        // TODO add your handling code here:
+          ex01_l3.setVisible(true);
+    }//GEN-LAST:event_jMenuItem33ActionPerformed
+
+    private void jMenuItem34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem34ActionPerformed
+        // TODO add your handling code here:
+         ex02_l3.setVisible(true);
+    }//GEN-LAST:event_jMenuItem34ActionPerformed
+
+    private void jMenuItem35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem35ActionPerformed
+        // TODO add your handling code here:
+         ex03_l3.setVisible(true);
+    }//GEN-LAST:event_jMenuItem35ActionPerformed
+
+    private void jMenuItem37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem37ActionPerformed
+        // TODO add your handling code here:
+         ex05_l3.setVisible(true);
+    }//GEN-LAST:event_jMenuItem37ActionPerformed
 
     /**
      * @param args the command line arguments
